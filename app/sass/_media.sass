@@ -1,0 +1,168 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+
+// ≥768px
++media-breakpoint-down(sm)
+
+// ≥576px
++media-breakpoint-down(xs)
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
+
+
+@media screen and (max-width: 992px)
+	.header__wrapper
+		padding-top: 5px
+		padding-bottom: 5px
+	.header__menu
+		flex-direction: column
+		position: absolute
+		display: none
+	.header__right .header__mail,.header__right .header__time
+		display: none
+	.header__right .header__phone
+		flex-direction: row
+		align-items: center
+		a
+			font-size: 16px
+		a:last-child
+			margin-left: 20px
+	.header__right
+		padding-top: 0
+		justify-content: flex-end
+		align-items: center
+
+	.header
+		background-color: #f3efe8
+
+	.header__logo-img
+		margin: 0 20px 0 0
+		width: 60px
+		img
+			width: 100%
+			height: auto
+	.header__logo-text
+		font-size: 19px
+
+	.show-hide-menu
+		display: block
+
+	.header
+		position: relative
+	.header__menu
+		width: 100%
+		background-color: #f3efe8
+		left: 0
+		top: calc(100% - 2px)
+		z-index: 2000
+		& > li
+			position: relative
+			& > a
+				padding-left: 55px
+				background: url('../img/icons/header-sprite.png') no-repeat -35px -521px
+			&:nth-child(2)
+				& > a
+					background-position: -35px -772px
+			&:nth-child(3)
+				& > a
+					background-position: -35px -901px
+			&:nth-child(4)
+				& > a
+					background-position: -32px -645px
+			&:nth-child(5)
+				& > a
+					background-position: -35px -395px
+			&:nth-child(6)
+				& > a
+					background-position: -37px -1031px
+			
+	.header__submenu
+		z-index: 20
+		width: 100%
+		position: relative
+
+	.footer__nav
+		display: none
+
+	.footer__wrapper
+		flex-direction: column
+
+@media screen and (max-width: 768px)
+	.header__right .header__phone
+		display: none
+
+	.services-block
+		flex-direction: column
+	.services-block__img
+		margin-right: 0
+		max-width: 100%
+		&:after
+			top: auto
+			bottom: 0
+			right: 50%
+			transform: translateX(50%)
+			border-right-color: transparent
+			border-bottom-color: #faf9f7
+			// z-index: 
+	.services-block__title h3 a
+		border-bottom: none
+		font-size: 20px
+		line-height: 1.15
+
+	.services-block__info
+		font-size: 16px
+		padding-top: 20px
+		
+@media screen and (max-width: 576px)
+	.footer__contacts
+		flex-direction: column
+		height: auto
+		align-self: flex-start
+
+	.footer__mail
+		margin-bottom: 20px
+
+	.footer__phone p
+		font-size: 14px
+
+	.our-works-block .row div:nth-child(3), .our-works-block .row div:nth-child(4)
+		display: none
+
+	.our-works-block__link
+		justify-content: center
+
+	.our-works-block__link a
+		display: flex
+		width: 260px
+		height: 50px
+		background: $accent	
+		color: #fff
+		align-items: center
+		text-decoration: none
+		justify-content: center
+		padding-right: 25px
+		&:after
+			right: 10px
+
+	
